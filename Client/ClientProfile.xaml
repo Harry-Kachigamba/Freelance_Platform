@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Freelance_Platform_Final.Client.ClientProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Freelance_Platform_Final.Client"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer Margin="20,20,20,20" HorizontalScrollBarVisibility="Auto">
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <!-- Title -->
+            <TextBlock Text="Enter Profile Details" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,20,20,20"/>
+
+            <!-- Firstname -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Firstname:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="FirstnameTextBox" PlaceholderText="Enter your firstname" Width="200" />
+            </StackPanel>
+
+            <!-- Lastname -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Lastname:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="LastnameTextBox" PlaceholderText="Enter your lastname" Width="200" />
+            </StackPanel>
+
+            <!-- Email -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Email:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="EmailTextBox" PlaceholderText="Enter your email" Width="200" />
+            </StackPanel>
+
+            <!-- Username -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Username:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="UsernameTextBox" PlaceholderText="Enter your username" Width="200" />
+            </StackPanel>
+
+            <!-- Phone -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Phone:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="PhoneTextBox" PlaceholderText="Enter your phonenumber" Width="200" />
+            </StackPanel>
+
+            <!-- Country -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Country:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="CountryTextBox" PlaceholderText="Enter your country" Width="200" />
+            </StackPanel>
+
+            <!-- District -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="District:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="DistrictTextBox" PlaceholderText="Enter your district" Width="200" />
+            </StackPanel>
+
+            <!-- Previous Freelancers -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Previous Freelancer:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="PrevoiousFreelancerTextBox" PlaceholderText="Enter your Previous" Width="200" />
+            </StackPanel>
+
+            <!-- Company -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Company:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="CompanyTextBox" PlaceholderText="Enter your Profession" Width="200" />
+            </StackPanel>
+
+            <!-- Interests -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Interests:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="InterestsTextBox" PlaceholderText="Enter your Profession" Width="200" />
+            </StackPanel>
+
+            <!-- Sign Up Button -->
+            <Button x:Name="clientprofilebutton" Content="Submit" Background="DodgerBlue" Foreground="White" HorizontalAlignment="Center" Margin="0,20,0,0" Width="300" Click="clientprofilebutton_Click"/>
+
+            <!-- Redirect to Login Form -->
+            <HyperlinkButton Content="Return to dashboard" HorizontalAlignment="Center" Click="HyperlinkButton_Click" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>

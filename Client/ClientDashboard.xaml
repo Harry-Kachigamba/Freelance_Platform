@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Freelance_Platform_Final.ClientDashboard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Freelance_Platform_Final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView x:Name="Client_Dasboard_Navigation"
+                    PaneDisplayMode="Left"
+                    IsSettingsVisible="False"
+                    IsBackButtonVisible="Collapsed"
+                    SelectionChanged="Client_Dasboard_Navigation_SelectionChanged">
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="NavItem_Freelancer" Content="Freelancer" Tag="SamplePage1" Icon="People" />
+                <NavigationViewItem x:Name="NavItem_Post_Project" Content="Post Projects" Tag="SamplePage2" Icon="Attach" />
+                <NavigationViewItem x:Name="NavItem_Completed_Project" Content="Completed Projects" Tag="SamplePage3" Icon="Accept" />
+            </NavigationView.MenuItems>
+
+            <NavigationView.FooterMenuItems>
+                <Button x:Name="ClientAddProfileButton" Content="Add Profile" Background="DodgerBlue" Foreground="White" HorizontalAlignment="Center" Width="200" Click="ClientAddProfileButton_Click"/>
+                <Button x:Name="ClientLogoutButton" Content="Log out" Background="DodgerBlue" Foreground="White" HorizontalAlignment="Center" Width="200" Click="ClientLogoutButton_Click"/>
+            </NavigationView.FooterMenuItems>
+            <Frame x:Name="client_nav" />
+        </NavigationView>
+    </Grid>
+</Page>

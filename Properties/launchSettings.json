@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Freelance_Platform_Final (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Freelance_Platform_Final (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
