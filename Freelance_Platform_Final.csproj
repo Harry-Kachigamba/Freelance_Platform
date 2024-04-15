@@ -18,10 +18,7 @@
     <Page Remove="ViewModel\**" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="ClientDashboard.xaml" />
-    <None Remove="ClientLogin.xaml" />
     <None Remove="ClientNavView.xaml" />
-    <None Remove="ClientSignup.xaml" />
     <None Remove="Client\ClientProfile.xaml" />
     <None Remove="CompleteProjectNavView.xaml" />
     <None Remove="FreelancerNavView.xaml" />
@@ -94,36 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="CompletedProjectsNavView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="ClientDashboard.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="FreelancerDashboard.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="ClientSignup.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="FreelancerSignup.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="FreelancerLogin.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="ClientLogin.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
