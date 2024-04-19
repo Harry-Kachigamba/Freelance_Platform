@@ -6,16 +6,8 @@ using System.Collections.ObjectModel;
 using Windows.Storage;
 using Windows.System;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
 namespace Freelance_Platform_Final
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    /// 
-
     public class CompletedProjectClientPDFItem
     {
         public int Id { get; set; }
@@ -30,10 +22,10 @@ namespace Freelance_Platform_Final
         public CompleteProjectNavView()
         {
             this.InitializeComponent();
-            LoadPDFsFromDatabase();
+            LoadCompletedProjectsClientFromDatabase();
         }
 
-        private void LoadPDFsFromDatabase()
+        private void LoadCompletedProjectsClientFromDatabase()
         {
             string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
             string query = "SELECT PdfName, PdfData FROM CompletedProjects";

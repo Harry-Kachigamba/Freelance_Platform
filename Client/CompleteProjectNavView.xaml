@@ -11,7 +11,7 @@
 
     <ListView x:Name="PDFListView" SelectionChanged="PDFListView_SelectionChanged">
         <ListView.ItemTemplate>
-            <DataTemplate x:DataType="local:CompletedPDFItem">
+            <DataTemplate x:DataType="local:CompletedProjectClientPDFItem">
                 <!-- Define your item layout here -->
                 <TextBlock Text="{x:Bind Name}" />
                 <!-- Additional controls or bindings -->
