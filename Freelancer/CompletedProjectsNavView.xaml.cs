@@ -27,7 +27,7 @@ namespace Freelance_Platform_Final
         private void LoadCompletedProjectsFreelancerFromDatabase()
         {
             string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
-            string query = "SELECT PdfName, PdfData FROM CompletedProjects";
+            string query = "SELECT PdfId, PdfName, PdfData FROM CompletedProjects";
 
             using (MySqlConnection connection = new(connectionString))
             {
@@ -37,11 +37,13 @@ namespace Freelance_Platform_Final
                 using MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
+                    int id = reader.GetInt32("PdfId");
                     string name = reader.GetString("PdfName");
                     byte[] data = (byte[])reader["PdfData"];
 
                     PDFItems.Add(new CompletedProjectFreelancerPDFItem
                     {
+                        Id = id,
                         Name = name,
                         PDFData = data
                     }

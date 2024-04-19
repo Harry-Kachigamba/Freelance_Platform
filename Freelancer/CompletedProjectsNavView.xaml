@@ -12,21 +12,8 @@
     <ListView x:Name="PDFListView" SelectionChanged="PDFListView_SelectionChanged">
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="local:CompletedProjectFreelancerPDFItem">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="{x:Bind Name}" Margin="5"/>
-                </Grid>
+                <TextBlock Text="{x:Bind Name}" />
             </DataTemplate>
         </ListView.ItemTemplate>
-        <ListView.ItemsPanel>
-            <ItemsPanelTemplate>
-                <GridView/>
-            </ItemsPanelTemplate>
-        </ListView.ItemsPanel>
     </ListView>
-
-
 </Page>
