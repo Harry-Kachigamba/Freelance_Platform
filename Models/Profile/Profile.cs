@@ -14,5 +14,6 @@ namespace Freelance_Platform_Final.Models
         public string Phone { get; set; }
         public string Country { get; set; }
         public string District { get; set; }
+        public string Username { get; set; }
     }
 }

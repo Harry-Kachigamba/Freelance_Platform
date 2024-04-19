@@ -23,6 +23,8 @@
     <None Remove="CompleteProjectNavView.xaml" />
     <None Remove="FreelancerNavView.xaml" />
     <None Remove="Freelancer\FreelancerProfile.xaml" />
+    <None Remove="Freelancer\PostCompletedProectNavView.xaml" />
+    <None Remove="Freelancer\PostPendingProjectsNavView.xaml" />
     <None Remove="LandingPage.xaml" />
     <None Remove="MainPage.xaml" />
     <None Remove="PostProjectNavView.xaml" />
@@ -42,7 +44,6 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240311000" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.3233" />
     <PackageReference Include="MySqlConnector" Version="2.3.5" />
-    <PackageReference Include="VisioForge.DotNet.Core" Version="15.8.52" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
 
@@ -120,5 +121,15 @@
   </PropertyGroup>
   <ItemGroup>
     <PRIResource Remove="ViewModel\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Freelancer\PostCompletedProectNavView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Freelancer\PostPendingProjectsNavView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

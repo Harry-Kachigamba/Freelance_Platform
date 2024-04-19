@@ -28,6 +28,7 @@
 
         <!-- Redirect to Login Form -->
         <HyperlinkButton Content="Don't have an account?" HorizontalAlignment="Center" Click="HyperlinkButtonClientLogin_Click" />
+        <HyperlinkButton Content="Return" HorizontalAlignment="Center" Click="ReturnHyperlinkButton_Click" Foreground="Red"/>
     </StackPanel>
 
 </Page>

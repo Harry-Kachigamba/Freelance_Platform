@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Page
-    x:Class="Freelance_Platform_Final.PostProjectNavView"
+    x:Class="Freelance_Platform_Final.Freelancer.PostCompletedProectNavView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Freelance_Platform_Final"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -12,7 +11,7 @@
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
         <StackPanel Orientation="Vertical" Margin="20,20,20,20">
-            <TextBlock x:Name="postprojectTitle" Foreground="DodgerBlue" Text="Post Projects to be viewed by the Freelancer, Only PDF Files are Valid" />
+            <TextBlock x:Name="postcompletedprojectTitle" Foreground="DodgerBlue" Text="Post Completed Projects to be viewed on the Completed Projects Taband the Client, Only PDF Files are Valid" />
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20,20,20,20">

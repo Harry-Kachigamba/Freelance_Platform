@@ -3,7 +3,6 @@
     x:Class="Freelance_Platform_Final.FreelancerDashboard"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Freelance_Platform_Final"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -18,8 +17,10 @@
             <NavigationView.MenuItems>
                 <NavigationViewItem x:Name="NavItem_Client" Content="Client" Tag="SamplePage1" Icon="People" />
                 <NavigationViewItem x:Name="NavItem_Available_Projects" Content="Available Projects" Tag="SamplePage2" Icon="Manage"  />
-                <NavigationViewItem x:Name="NavItem_Pending_Projects" Content="Pending Projects" Tag="SamplePage3" Icon="Clock" />
-                <NavigationViewItem x:Name="NavItem_Completed_Projects" Content="Completed Projects" Tag="SamplePage3" Icon="Accept" />
+                <NavigationViewItem x:Name="NavItem_NotCompleted_Projects" Content="Post Pending Projects" Tag="SamplePage3" Icon="Add" />
+                <NavigationViewItem x:Name="NavItem_Pending_Projects" Content="Pending Projects" Tag="SamplePage4" Icon="Clock" />
+                <NavigationViewItem x:Name="NavItem_PostCompleted_Projects" Content="Post Completed Project" Tag="SamplePage5" Icon="Add" />
+                <NavigationViewItem x:Name="NavItem_Completed_Projects" Content="Completed Projects" Tag="SamplePage6" Icon="Accept" />
             </NavigationView.MenuItems>
 
             <NavigationView.FooterMenuItems>

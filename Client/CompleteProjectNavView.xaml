@@ -9,7 +9,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock Text="Client Complete Project" />
-    </Grid>
+    <ListView x:Name="PDFListView" SelectionChanged="PDFListView_SelectionChanged">
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="local:CompletedPDFItem">
+                <!-- Define your item layout here -->
+                <TextBlock Text="{x:Bind Name}" />
+                <!-- Additional controls or bindings -->
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </Page>

@@ -39,6 +39,11 @@ namespace Freelance_Platform_Final
             Frame.Navigate(typeof(FreelancerSignup), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
         }
 
+        private void ReturnHyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
+        }
+
         //Method, redirects to freelancer dashboard
         public void freelancer_dasnboard()
         {
@@ -109,5 +114,6 @@ namespace Freelance_Platform_Final
                 }
             }
         }
+
     }
 }
