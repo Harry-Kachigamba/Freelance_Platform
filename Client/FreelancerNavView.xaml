@@ -5,32 +5,61 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Freelance_Platform_Final.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:muxc="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <ListView x:Name="ProfileListView" ItemsSource="{x:Bind ViewModel.Profiles}">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:FreelancerProfile">
-                    <StackPanel Orientation="Vertical" Margin="20,20,20,20">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible">
+        <Grid>
+            <muxc:ListView x:Name="ProfileListView" ItemsSource="{x:Bind ViewModel.Profiles}">
+                <muxc:ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:FreelancerProfile">
+                        <Grid Margin="5">
 
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{x:Bind Firstname}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind Lastname}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind Email}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind Phone}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind Username}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind Country}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind District}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind Skills}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind Expertise}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                            <TextBlock Text="{x:Bind PastWork}" FontWeight="SemiBold" Padding="3,3,3,3" />
-                        </StackPanel>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                            </Grid.ColumnDefinitions>
 
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Firstname" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="Lastname" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="2" Text="Email" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="3" Text="Phone" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="4" Text="Username" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="5" Text="Country" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="6" Text="District" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="7" Text="Skills" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="8" Text="Expertise" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="0" Grid.Column="9" Text="Past Work" Foreground="DodgerBlue" FontWeight="SemiBold" TextAlignment="Center" Padding="10" />
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="{x:Bind Firstname}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{x:Bind Lastname}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="2" Text="{x:Bind Email}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{x:Bind Phone}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="4" Text="{x:Bind Username}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="5" Text="{x:Bind Country}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="6" Text="{x:Bind District}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="7" Text="{x:Bind Skills}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="8" Text="{x:Bind Expertise}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+                            <TextBlock Grid.Row="1" Grid.Column="9" Text="{x:Bind PastWork}" FontWeight="Normal" TextAlignment="Center" Padding="10" />
+
+                        </Grid>
+                    </DataTemplate>
+                </muxc:ListView.ItemTemplate>
+            </muxc:ListView>
+        </Grid>
+    </ScrollViewer>
 </Page>
