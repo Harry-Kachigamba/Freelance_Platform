@@ -51,7 +51,7 @@ namespace Freelance_Platform_Final
                     await connection.OpenAsync();
 
                     // Insert the file into the database
-                    using (var command = new MySqlCommand("INSERT INTO PdfFiles (PdfName, PdfData) VALUES (@projectnametextbox, @pdfData)", connection))
+                    using (var command = new MySqlCommand("INSERT INTO PostProjects (PdfName, PdfData) VALUES (@projectnametextbox, @pdfData)", connection))
                     {
                         command.Parameters.AddWithValue("@projectnametextbox", MySqlDbType.VarChar).Value = projectnametextbox.Text;
                         command.Parameters.AddWithValue("@pdfData", fileBytes);

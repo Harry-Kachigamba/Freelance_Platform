@@ -6,16 +6,9 @@ using System.Collections.ObjectModel;
 using Windows.Storage;
 using Windows.System;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
 namespace Freelance_Platform_Final
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    /// 
-    public class PDFItem
+    public class AvailableProjectsPDFItem
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -24,18 +17,18 @@ namespace Freelance_Platform_Final
 
     public sealed partial class AvailableProjectsNavView : Page
     {
-        public ObservableCollection<PDFItem> PDFItems { get; set; } = new ObservableCollection<PDFItem>();
+        public ObservableCollection<AvailableProjectsPDFItem> PDFItems { get; set; } = new ObservableCollection<AvailableProjectsPDFItem>();
 
         public AvailableProjectsNavView()
         {
             this.InitializeComponent();
-            LoadPDFsFromDatabase();
+            LoadAvailableProjectsFromDatabase();
         }
 
-        private void LoadPDFsFromDatabase()
+        private void LoadAvailableProjectsFromDatabase()
         {
             string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
-            string query = "SELECT PdfName, PdfData FROM PdfFiles";
+            string query = "SELECT PdfName, PdfData FROM PostProjects";
 
             using (MySqlConnection connection = new(connectionString))
             {
@@ -48,7 +41,7 @@ namespace Freelance_Platform_Final
                     string name = reader.GetString("PdfName");
                     byte[] data = (byte[])reader["PdfData"];
 
-                    PDFItems.Add(new PDFItem
+                    PDFItems.Add(new AvailableProjectsPDFItem
                     {
                         Name = name,
                         PDFData = data
@@ -60,7 +53,7 @@ namespace Freelance_Platform_Final
             PDFListView.ItemsSource = PDFItems;
         }
 
-        public static async void OpenPdf(PDFItem pdfDocument)
+        public static async void OpenPdf(AvailableProjectsPDFItem pdfDocument)
         {
             try
             {
@@ -93,7 +86,7 @@ namespace Freelance_Platform_Final
             if (PDFListView.SelectedItem != null)
             {
                 // Get the selected PDF item from the PDFListView
-                PDFItem selectedPDF = (PDFItem)PDFListView.SelectedItem;
+                AvailableProjectsPDFItem selectedPDF = (AvailableProjectsPDFItem)PDFListView.SelectedItem;
 
                 // Open the selected PDF document
                 OpenPdf(selectedPDF);

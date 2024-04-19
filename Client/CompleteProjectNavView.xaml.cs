@@ -16,7 +16,7 @@ namespace Freelance_Platform_Final
     /// </summary>
     /// 
 
-    public class CompletedPDFItem
+    public class CompletedProjectClientPDFItem
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -25,7 +25,7 @@ namespace Freelance_Platform_Final
 
     public sealed partial class CompleteProjectNavView : Page
     {
-        public ObservableCollection<CompletedPDFItem> PDFItems { get; set; } = new ObservableCollection<CompletedPDFItem>();
+        public ObservableCollection<CompletedProjectClientPDFItem> PDFItems { get; set; } = new ObservableCollection<CompletedProjectClientPDFItem>();
 
         public CompleteProjectNavView()
         {
@@ -36,7 +36,7 @@ namespace Freelance_Platform_Final
         private void LoadPDFsFromDatabase()
         {
             string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
-            string query = "SELECT PdfName, PdfData FROM PdfFiles";
+            string query = "SELECT PdfName, PdfData FROM CompletedProjects";
 
             using (MySqlConnection connection = new(connectionString))
             {
@@ -49,7 +49,7 @@ namespace Freelance_Platform_Final
                     string name = reader.GetString("PdfName");
                     byte[] data = (byte[])reader["PdfData"];
 
-                    PDFItems.Add(new CompletedPDFItem
+                    PDFItems.Add(new CompletedProjectClientPDFItem
                     {
                         Name = name,
                         PDFData = data
@@ -61,7 +61,7 @@ namespace Freelance_Platform_Final
             PDFListView.ItemsSource = PDFItems;
         }
 
-        public static async void OpenPdf(CompletedPDFItem pdfDocument)
+        public static async void OpenPdf(CompletedProjectClientPDFItem pdfDocument)
         {
             try
             {
@@ -94,7 +94,7 @@ namespace Freelance_Platform_Final
             if (PDFListView.SelectedItem != null)
             {
                 // Get the selected PDF item from the PDFListView
-                CompletedPDFItem selectedPDF = (CompletedPDFItem)PDFListView.SelectedItem;
+                CompletedProjectClientPDFItem selectedPDF = (CompletedProjectClientPDFItem)PDFListView.SelectedItem;
 
                 // Open the selected PDF document
                 OpenPdf(selectedPDF);
