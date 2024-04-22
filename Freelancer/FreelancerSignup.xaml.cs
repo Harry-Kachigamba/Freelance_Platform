@@ -10,7 +10,7 @@ namespace Freelance_Platform_Final
     {
         public FreelancerSignup()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         readonly DBConnection database = new();

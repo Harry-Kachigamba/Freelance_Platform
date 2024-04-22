@@ -9,7 +9,7 @@ namespace Freelance_Platform_Final.Freelancer
     {
         public BidProjectNavView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         readonly DBConnection database = new();

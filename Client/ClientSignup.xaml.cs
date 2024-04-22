@@ -10,7 +10,7 @@ namespace Freelance_Platform_Final
     {
         public ClientSignup()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         //Database Connection Instance
@@ -29,7 +29,7 @@ namespace Freelance_Platform_Final
         private bool Register()
         {
             database.OpenConnection();
-            MySqlCommand newFreelancer = new MySqlCommand("INSERT INTO Client (Firstname, Lastname, Email, Phone, Country, District, Username, Password) VALUES (@FirstnameTextBox, @LastnameTextBox, @EmailTextBox, @PhoneTextBox, @CountryTextBox, @DistrictTextBox, @UsernameTextBox, @PasswordTextBox)", database.GetConnection());
+            MySqlCommand newFreelancer = new("INSERT INTO Client (Firstname, Lastname, Email, Phone, Country, District, Username, Password) VALUES (@FirstnameTextBox, @LastnameTextBox, @EmailTextBox, @PhoneTextBox, @CountryTextBox, @DistrictTextBox, @UsernameTextBox, @PasswordTextBox)", database.GetConnection());
             newFreelancer.Parameters.Add("@FirstnameTextBox", MySqlDbType.VarChar).Value = FirstnameTextBox.Text;
             newFreelancer.Parameters.Add("@LastnameTextBox", MySqlDbType.VarChar).Value = LastnameTextBox.Text;
             newFreelancer.Parameters.Add("@EmailTextBox", MySqlDbType.VarChar).Value = EmailTextBox.Text;

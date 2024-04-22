@@ -11,7 +11,7 @@ namespace Freelance_Platform_Final
     {
         public ClientDashboard()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void Client_Dasboard_Navigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)

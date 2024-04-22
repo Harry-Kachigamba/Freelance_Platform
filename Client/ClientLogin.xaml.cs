@@ -11,7 +11,7 @@ namespace Freelance_Platform_Final
     {
         public ClientLogin()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         readonly DBConnection database = new();

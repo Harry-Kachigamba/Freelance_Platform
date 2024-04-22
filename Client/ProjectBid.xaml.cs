@@ -13,8 +13,8 @@ namespace Freelance_Platform_Final.Client
 
         public ProjectBid()
         {
-            this.InitializeComponent();
-            this.Loaded += ProjectsPage_Loaded;
+            InitializeComponent();
+            Loaded += ProjectsPage_Loaded;
         }
 
         private async void ProjectsPage_Loaded(object sender, RoutedEventArgs e)

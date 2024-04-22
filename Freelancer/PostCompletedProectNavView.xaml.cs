@@ -11,7 +11,7 @@ namespace Freelance_Platform_Final.Freelancer
     {
         public PostCompletedProectNavView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private async void UploadCompetedPDF_Click(object sender, RoutedEventArgs e)

@@ -21,7 +21,7 @@ namespace Freelance_Platform_Final
 
         public PendingProjectsNavView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             LoadPendingProjectsFromDatabase();
         }
 

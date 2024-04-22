@@ -11,7 +11,7 @@ namespace Freelance_Platform_Final.Client
     {
         public ClientProfile()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         readonly DBConnection database = new();
@@ -55,10 +55,9 @@ namespace Freelance_Platform_Final.Client
                 {
                     Title = "Error Message",
                     Content = "Please fill in all fields!",
-                    CloseButtonText = "Close"
+                    CloseButtonText = "Close",
+                    XamlRoot = clientprofilebutton.XamlRoot
                 };
-
-                dialog.XamlRoot = clientprofilebutton.XamlRoot;
                 _ = await dialog.ShowAsync();
             }
             else

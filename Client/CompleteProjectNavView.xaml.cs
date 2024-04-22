@@ -21,7 +21,7 @@ namespace Freelance_Platform_Final
 
         public CompleteProjectNavView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             LoadCompletedProjectsClientFromDatabase();
         }
 

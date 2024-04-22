@@ -20,7 +20,7 @@ namespace Freelance_Platform_Final
 
         public CompletedProjectsNavView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             LoadCompletedProjectsFreelancerFromDatabase();
         }
 

@@ -13,8 +13,8 @@ namespace Freelance_Platform_Final
 
         public FreelancerNavView()
         {
-            this.InitializeComponent();
-            this.Loaded += ProfilesPage_Loaded;
+            InitializeComponent();
+            Loaded += ProfilesPage_Loaded;
         }
 
         private async void ProfilesPage_Loaded(object sender, RoutedEventArgs e)
@@ -24,7 +24,7 @@ namespace Freelance_Platform_Final
 
         public class ProfileViewModel
         {
-            private ProfileService _profileService = new ProfileService();
+            private readonly ProfileService _profileService = new();
             public ObservableCollection<FreelancerProfile> Profiles { get; } = new ObservableCollection<FreelancerProfile>();
 
             public async Task LoadProfilesAsync()
