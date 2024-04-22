@@ -1,15 +1,10 @@
 ﻿using MySqlConnector;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Freelance_Platform_Final
 {
     public class DBConnection
     {
-        MySqlConnection connect = new MySqlConnection("server=localhost; port=3307; user id=root; password=12345; database=Freelance");
+        readonly MySqlConnection connect = new("server=localhost; port=3307; user id=root; password=12345; database=Freelance");
 
         public MySqlConnection GetConnection()
         {

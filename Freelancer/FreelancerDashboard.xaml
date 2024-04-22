@@ -14,13 +14,15 @@
                         IsSettingsVisible="False"
                         IsBackButtonVisible="Collapsed"
                         SelectionChanged="Freelancer_Dasboard_Navigation_SelectionChanged">
+            
             <NavigationView.MenuItems>
                 <NavigationViewItem x:Name="NavItem_Client" Content="Client" Tag="SamplePage1" Icon="People" />
                 <NavigationViewItem x:Name="NavItem_Available_Projects" Content="Available Projects" Tag="SamplePage2" Icon="Manage"  />
-                <NavigationViewItem x:Name="NavItem_NotCompleted_Projects" Content="Post Pending Projects" Tag="SamplePage3" Icon="Add" />
-                <NavigationViewItem x:Name="NavItem_Pending_Projects" Content="Pending Projects" Tag="SamplePage4" Icon="Clock" />
-                <NavigationViewItem x:Name="NavItem_PostCompleted_Projects" Content="Post Completed Project" Tag="SamplePage5" Icon="Add" />
-                <NavigationViewItem x:Name="NavItem_Completed_Projects" Content="Completed Projects" Tag="SamplePage6" Icon="Accept" />
+                <NavigationViewItem x:Name="NavItem_Bid_Projects" Content="Bid Project" Tag="SamplePage3" Icon="Calendar"  />
+                <NavigationViewItem x:Name="NavItem_NotCompleted_Projects" Content="Post Pending Projects" Tag="SamplePage4" Icon="Add" />
+                <NavigationViewItem x:Name="NavItem_Pending_Projects" Content="Pending Projects" Tag="SamplePage5" Icon="Clock" />
+                <NavigationViewItem x:Name="NavItem_PostCompleted_Projects" Content="Post Completed Project" Tag="SamplePage6" Icon="Add" />
+                <NavigationViewItem x:Name="NavItem_Completed_Projects" Content="Completed Projects" Tag="SamplePage7" Icon="Accept" />
             </NavigationView.MenuItems>
 
             <NavigationView.FooterMenuItems>

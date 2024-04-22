@@ -20,8 +20,10 @@
   <ItemGroup>
     <None Remove="ClientNavView.xaml" />
     <None Remove="Client\ClientProfile.xaml" />
+    <None Remove="Client\ProjectBid.xaml" />
     <None Remove="CompleteProjectNavView.xaml" />
     <None Remove="FreelancerNavView.xaml" />
+    <None Remove="Freelancer\BidProjectNavView.xaml" />
     <None Remove="Freelancer\FreelancerProfile.xaml" />
     <None Remove="Freelancer\PostCompletedProectNavView.xaml" />
     <None Remove="Freelancer\PostPendingProjectsNavView.xaml" />
@@ -121,6 +123,16 @@
   </PropertyGroup>
   <ItemGroup>
     <PRIResource Remove="ViewModel\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Client\ProjectBid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Freelancer\BidProjectNavView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Freelancer\PostCompletedProectNavView.xaml">

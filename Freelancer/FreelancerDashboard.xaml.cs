@@ -39,6 +39,10 @@ namespace Freelance_Platform_Final
             {
                 pageType = typeof(AvailableProjectsNavView);
             }
+            else if (selectedItem.Name == NavItem_Bid_Projects.Name)
+            {
+                pageType = typeof(BidProjectNavView);
+            }
             else if (selectedItem.Name == NavItem_NotCompleted_Projects.Name)
             {
                 pageType = typeof(PostPendingProjectsNavView);
@@ -75,9 +79,8 @@ namespace Freelance_Platform_Final
                 Title = "Signing Out",
                 Content = "Are you sure you want to logout?",
                 CloseButtonText = "Yes",
+                XamlRoot = FreelancerLogoutButton.XamlRoot
             };
-
-            dialog.XamlRoot = FreelancerLogoutButton.XamlRoot;
             _ = await dialog.ShowAsync();
             Mainpage();
         }

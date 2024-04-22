@@ -77,7 +77,7 @@
             </StackPanel>
 
             <!-- Sign Up Button -->
-            <Button x:Name="clientprofilebutton" Content="Submit" Background="DodgerBlue" Foreground="White" HorizontalAlignment="Center" Margin="0,20,0,0" Width="300" Click="clientprofilebutton_Click"/>
+            <Button x:Name="clientprofilebutton" Content="Submit" Background="DodgerBlue" Foreground="White" HorizontalAlignment="Center" Margin="0,20,0,0" Width="300" Click="Clientprofilebutton_Click"/>
 
             <!-- Redirect to Login Form -->
             <HyperlinkButton Content="Return to dashboard" HorizontalAlignment="Center" Click="HyperlinkButton_Click" />

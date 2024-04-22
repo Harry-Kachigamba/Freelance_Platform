@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Freelance_Platform_Final.Models
+﻿namespace Freelance_Platform_Final.Models
 {
-    public class Profile
+    public abstract class Profile
     {
         public string Firstname { get; set; }
         public string Lastname { get; set; }

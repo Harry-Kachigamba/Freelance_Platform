@@ -1,28 +1,11 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
-using Microsoft.UI.Xaml.Navigation;
 using MySqlConnector;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace Freelance_Platform_Final
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class FreelancerSignup : Page
     {
         public FreelancerSignup()
@@ -30,12 +13,12 @@ namespace Freelance_Platform_Final
             this.InitializeComponent();
         }
 
-        DBConnection database = new DBConnection();
+        readonly DBConnection database = new();
 
         private bool Register()
         {
             database.OpenConnection();
-            MySqlCommand newFreelancer = new MySqlCommand("INSERT INTO Freelancer (Firstname, Lastname, Email, Phone, Country, District, Profession, Username, Password) VALUES (@Firstname, @Lastname, @Email, @Phone, @Country, @District, @Profession, @Username, @Password)", database.GetConnection());
+            MySqlCommand newFreelancer = new("INSERT INTO Freelancer (Firstname, Lastname, Email, Phone, Country, District, Profession, Username, Password) VALUES (@Firstname, @Lastname, @Email, @Phone, @Country, @District, @Profession, @Username, @Password)", database.GetConnection());
             newFreelancer.Parameters.Add("@Firstname", MySqlDbType.VarChar).Value = FirstnameTextBox.Text;
             newFreelancer.Parameters.Add("@Lastname", MySqlDbType.VarChar).Value = LastnameTextBox.Text;
             newFreelancer.Parameters.Add("@Email", MySqlDbType.VarChar).Value = EmailTextBox.Text;
@@ -62,7 +45,7 @@ namespace Freelance_Platform_Final
             Frame.Navigate(typeof(FreelancerLogin), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
         }
 
-        public void loginfrom()
+        public void Loginfrom()
         {
             Frame.Navigate(typeof(FreelancerLogin), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
         }
@@ -72,16 +55,14 @@ namespace Freelance_Platform_Final
             if (string.IsNullOrEmpty(FirstnameTextBox.Text) || string.IsNullOrEmpty(LastnameTextBox.Text) || string.IsNullOrEmpty(EmailTextBox.Text) || string.IsNullOrEmpty(PhoneTextBox.Text) || string.IsNullOrEmpty(CountryTextBox.Text) || string.IsNullOrEmpty(DistrictTextBox.Text) || string.IsNullOrEmpty(UsernameTextBox.Text) || string.IsNullOrEmpty(PasswordTextBox.Password))
             {
                 // Show an error message
-                ContentDialog dialog = new ContentDialog
+                ContentDialog dialog = new()
                 {
                     Title = "Error Message",
                     Content = "Please fill in all fields!",
-                    CloseButtonText = "Close"
+                    CloseButtonText = "Close",
+                    XamlRoot = freelancersignupbutton.XamlRoot
                 };
-
-                dialog.XamlRoot = freelancersignupbutton.XamlRoot;
-
-                ContentDialogResult result = await dialog.ShowAsync();
+                _ = await dialog.ShowAsync();
             }
             else
             {
@@ -89,32 +70,30 @@ namespace Freelance_Platform_Final
                 {
                     if (Register() == true)
                     {
-                        ContentDialog dialog = new ContentDialog
+                        ContentDialog dialog = new()
                         {
                             Title = "Success Message",
                             Content = "Sign Up Successful!",
-                            CloseButtonText = "Ok"
+                            CloseButtonText = "Ok",
+                            XamlRoot = freelancersignupbutton.XamlRoot
                         };
 
-                        dialog.XamlRoot = freelancersignupbutton.XamlRoot;
-
-                        ContentDialogResult result = await dialog.ShowAsync();
-                        loginfrom();
+                        _ = await dialog.ShowAsync();
+                        Loginfrom();
                     }
                 }
                 catch (MySqlException ex)
                 {
                     database.OpenConnection();
-                    ContentDialog dialog = new ContentDialog
+                    ContentDialog dialog = new()
                     {
                         Title = "Error Message",
                         Content = ex.Message,
-                        CloseButtonText = "Close"
+                        CloseButtonText = "Close",
+                        XamlRoot = freelancersignupbutton.XamlRoot
                     };
 
-                    dialog.XamlRoot = freelancersignupbutton.XamlRoot;
-
-                    ContentDialogResult result = await dialog.ShowAsync();
+                    _ = await dialog.ShowAsync();
                 }
             }
         }
