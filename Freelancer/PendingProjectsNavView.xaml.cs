@@ -27,7 +27,7 @@ namespace Freelance_Platform_Final
 
             private void LoadPendingProjectsFromDatabase()
             {
-                string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
+                string connectionString = "xxxxxxxxxxxxxx";
                 string query = "SELECT PdfName, PdfData FROM PendingProjects";
 
                 using (MySqlConnection connection = new(connectionString))
