@@ -7,7 +7,7 @@ namespace Freelance_Platform_Final.Controller
 {
     public class ProfileService
     {
-        private readonly string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
+        private readonly string connectionString = "xxxxxxxxxxxxx";
 
         public async Task<List<ClientProfile>> GetClientProfilesAsync()
         {
