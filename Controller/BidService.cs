@@ -7,7 +7,7 @@ namespace Freelance_Platform_Final.Controller
 {
     public class BidService
     {
-        private readonly string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
+        private readonly string connectionString = "xxxxxxxxxxxxxxxxxxxxxxx";
 
         public async Task<List<BidProject>> GetProjectBidsAsync()
         {
