@@ -37,7 +37,7 @@ namespace Freelance_Platform_Final
                 }
 
                 // Connect to MySQL database
-                string connectionString = "server=localhost; port=3307; user id=root; password=12345; database=Freelance";
+                string connectionString = "xxxxxxxxxxxxxx";
                 using var connection = new MySqlConnection(connectionString);
                 await connection.OpenAsync();
 
