@@ -4,7 +4,7 @@ namespace Freelance_Platform_Final
 {
     public class DBConnection
     {
-        readonly MySqlConnection connect = new("server=localhost; port=3307; user id=root; password=12345; database=Freelance");
+        readonly MySqlConnection connect = new("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
         public MySqlConnection GetConnection()
         {
